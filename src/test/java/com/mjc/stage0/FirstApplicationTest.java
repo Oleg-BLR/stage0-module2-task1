@@ -29,7 +29,7 @@ public class FirstApplicationTest {
         String result = Files.walk(Paths.get("src/main/java/com/mjc/stage0"))
                 .filter(Files::isRegularFile)
                 .filter(p -> p.toString().endsWith(".java"))
-                .flatMap(FirstApplicationTest::getFileLines)
+                .flatMap(FirstApplication::getFileLines)
                 .map(Object::toString)
                 .collect(Collectors.joining("\n"));
 
